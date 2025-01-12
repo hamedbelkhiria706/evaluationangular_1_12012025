@@ -1,1 +1,9 @@
 <p>livres works!</p>
+<h1>Liste Livres</h1>
+<ul>
+  <li *ngFor="let livre of this.ls.livres">
+    <strong>Titre:</strong> {{ livre.titre }} <br>
+    <strong>Auteur:</strong> {{ livre.auteur }} <br>
+    <strong>Année:</strong> {{ livre.annee }} <br>
+  </li>
+</ul>

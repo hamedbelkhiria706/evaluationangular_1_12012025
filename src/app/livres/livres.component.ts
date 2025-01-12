@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { LivrecrudService } from '../livrecrud.service';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-livres',
-  imports: [],
+  imports: [CommonModule,ReactiveFormsModule],
   templateUrl: './livres.component.html',
   styleUrl: './livres.component.css'
 })

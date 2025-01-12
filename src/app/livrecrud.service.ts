@@ -5,7 +5,15 @@ import {Livre} from './livre/livre.model';
 })
 export class LivrecrudService {
   public livres:Livre[]=[];
-  constructor() { }
+  constructor() { 
+    const livrestockes= localStorage.getItem('livres');
+    if (livrestockes) {
+        this.livres = JSON.parse(livrestockes);
+    } else {
+        this.livres = [];
+    }
+
+  }
   
   ajouterLivre(livre: Livre): void {
     
