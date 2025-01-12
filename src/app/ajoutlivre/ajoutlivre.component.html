@@ -1,0 +1,29 @@
+<p>ajoutlivre works!</p>
+<form [formGroup]="livreForm" (ngSubmit)="onSubmit()">
+   
+    <div>
+      <label for="titre">Titre:</label>
+      <input id="titre" formControlName="titre" />
+      <div *ngIf="livreForm.get('titre')?.invalid && livreForm.get('title')?.touched">
+        Titre requis.
+      </div>
+    </div>
+    
+    <div>
+      <label for="auteur">Auteur:</label>
+      <input id="auteur" formControlName="auteur" />
+      <div *ngIf="livreForm.get('auteur')?.invalid && livreForm.get('auteur')?.touched">
+        Auteur requis.
+      </div>
+    </div>
+    <div>
+        <label for="annee">Année:</label>
+        <input id="annee" formControlName="annee" />
+        <div *ngIf="livreForm.get('annee')?.invalid && livreForm.get('annee')?.touched">
+          Année requise.
+        </div>
+      </div>
+       
+    <button type="submit" [disabled]="livreForm.invalid">
+      Ajouter livre
+    </button>
